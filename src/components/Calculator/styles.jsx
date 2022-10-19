@@ -5,5 +5,7 @@ export const StyledCalculator = styled.div`
   width: 235px;
   border-radius: 5px;
   overflow: hidden;
-  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 1fr 48px 48px 48px 48px 48px;
 `;
