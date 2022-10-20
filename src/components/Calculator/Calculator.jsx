@@ -18,7 +18,7 @@ const Calculator = () => {
   return (
     <StyledCalculator>
       <Display value="100" />
-      <Button variant="action" onClick={(e) => clearMemory()} label="AC" />
+      <Button variant="standard" type="huge" onClick={(e) => clearMemory()} label="AC" />
       <Button variant="action" onClick={(e) => setOperation(e.target.textContent)} label="/" />
       <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="7" />
       <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="8" />
@@ -31,10 +31,15 @@ const Calculator = () => {
       <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="1" />
       <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="2" />
       <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="3" />
-      <Button variant="action" onClick={(e) => addDigit(e.target.textContent)} label="." />
-      <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="0" />
-      <Button variant="action" onClick={(e) => setOperation(e.target.textContent)} label="=" />
       <Button variant="action" onClick={(e) => setOperation(e.target.textContent)} label="+" />
+      <Button
+        variant="standard"
+        type="large"
+        onClick={(e) => addDigit(e.target.textContent)}
+        label="0"
+      />
+      <Button variant="standard" onClick={(e) => addDigit(e.target.textContent)} label="." />
+      <Button variant="action" onClick={(e) => setOperation(e.target.textContent)} label="=" />
     </StyledCalculator>
   );
 };

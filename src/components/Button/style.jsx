@@ -28,7 +28,9 @@ export const StyledButton = styled.button`
         }
       `;
     }
+  }}
 
+  ${(props) => {
     if (props.type === "large") {
       return css`
         grid-column: span 2;
