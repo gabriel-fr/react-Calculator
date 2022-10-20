@@ -28,13 +28,17 @@ export const StyledButton = styled.button`
         }
       `;
     }
+
+    if (props.type === "large") {
+      return css`
+        grid-column: span 2;
+      `;
+    }
+
+    if (props.type === "huge") {
+      return css`
+        grid-column: span 3;
+      `;
+    }
   }}
-`;
-
-export const StyledLargeButton = styled.button`
-  grid-column: span 2;
-`;
-
-export const StyledHugeButton = styled.button`
-  grid-column: span 3;
 `;
